@@ -1,0 +1,98 @@
+program crc
+output
+Enter the Number Of Data bits
+4
+Enter the number of generator bits
+16
+Enter the data bits
+1 0 1 0
+Enter the Generator bits
+1 0 1 0 1 0 0 1 0 1 0 1 0 1 0 1
+after appending
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+the codeword is 
+1
+0
+1
+0
+1
+0
+0
+1
+0
+1
+0
+1
+0
+1
+0
+1
+0
+0
+0
+Enter the received word data
+1
+0
+1
+0
+1
+0
+0
+1
+0
+1
+0
+1
+0
+1
+0
+1
+0
+0
+0
+the syndrome is 
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+No Error
+
+TCP program 8
+Output
+Enter File Name
+/home/student/Desktop/extras/test.txt
+testing done
+
