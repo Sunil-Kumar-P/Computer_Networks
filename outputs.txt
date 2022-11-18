@@ -96,3 +96,20 @@ Enter File Name
 /home/student/Desktop/extras/test.txt
 testing done
 
+
+Udpserver.java
+
+Enter the message to send
+working
+Computer Networks
+complete
+exit
+
+
+udpClient.java
+
+Message Recieved
+working
+Computer Networks
+complete
+exit
