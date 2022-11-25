@@ -1,102 +1,3 @@
-program crc
-output
-Enter the Number Of Data bits
-4
-Enter the number of generator bits
-16
-Enter the data bits
-1 0 1 0
-Enter the Generator bits
-1 0 1 0 1 0 0 1 0 1 0 1 0 1 0 1
-after appending
-1
-0
-1
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-the codeword is 
-1
-0
-1
-0
-1
-0
-0
-1
-0
-1
-0
-1
-0
-1
-0
-1
-0
-0
-0
-Enter the received word data
-1
-0
-1
-0
-1
-0
-0
-1
-0
-1
-0
-1
-0
-1
-0
-1
-0
-0
-0
-the syndrome is 
-1
-0
-1
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
-No Error
-
-TCP program 8
-Output
-Enter File Name
-/home/student/Desktop/extras/test.txt
-testing done
-
-
 Udpserver.java
 
 Enter the message to send
@@ -113,3 +14,20 @@ working
 Computer Networks
 complete
 exit
+
+
+ford.java
+
+Enter the no of vertices:
+4
+Enter the adjacency matrix:
+0 2 6 10
+2 0 3 999
+6 3 0 2
+10 999 2 0
+Enter src vertex:
+1
+1 to 1 is 0
+1 to 2 is 2
+1 to 3 is 5
+1 to 4 is 7
