@@ -1,0 +1,77 @@
+Pgm 1
+duplex-link $n0 $n1 100Mb 100ms DropTail
+duplex-link $n1 $n2 100Mb 10ms DropTail
+
+queue-limit $n0 $n1 10
+queue-limit $n1 $n2 10
+
+set packetSize_ 500
+set interval_ 0.0005
+
+$ awk -f 1.awk 1.tr
+No of packets dropped : 0
+------------------------------------------------------------------
+$ns duplex-link $n0 $n1 100Mb 100ms DropTail
+$ns duplex-link $n1 $n2 1Mb 10ms DropTail
+
+$ns queue-limit $n0 $n1 10
+$ns queue-limit $n1 $n2 10
+$cbr0 set packetSize_ 500
+$cbr0 set interval_ 0.0005
+
+$ awk -f 1.awk 1.tr
+No of packets dropped : 15566
+
+_______________________________________________________
+
+Pgm 2
+
+$ns duplex-link $n0 $n2 100Mb 300ms DropTail
+$ns duplex-link $n4 $n2 100Mb 300ms DropTail
+
+$ns duplex-link $n5 $n2 100Mb 300ms DropTail
+$ns duplex-link $n6 $n2 100Mb 300ms DropTail
+
+$ns duplex-link $n3 $n2 2Mb 300ms DropTail
+$ns duplex-link $n1 $n2 2Mb 300ms DropTail
+
+$ns queue-limit $n0 $n2 10
+$ns queue-limit $n4 $n2 3
+
+$ns queue-limit $n2 $n6 2
+$ns queue-limit $n5 $n2 10
+
+$ping0 set packetSize_ 500
+$ping0 set interval_ 0.001
+
+$ping5 set packetSize_ 500
+$ping5 set interval_ 0.001
+
+No of packets dropped : 0
+-----------------------------------------------------------------
+
+$ns duplex-link $n0 $n2 100Mb 300ms DropTail
+$ns duplex-link $n4 $n2 100Mb 300ms DropTail
+
+$ns duplex-link $n5 $n2 100Mb 300ms DropTail
+$ns duplex-link $n6 $n2 100Mb 300ms DropTail
+
+$ns duplex-link $n3 $n2 2Mb 300ms DropTail
+$ns duplex-link $n1 $n2 2Mb 300ms DropTail
+
+$ns queue-limit $n0 $n2 10
+$ns queue-limit $n4 $n2 3
+
+$ns queue-limit $n2 $n6 2
+$ns queue-limit $n5 $n2 10
+
+$ping0 set packetSize_ 500
+$ping0 set interval_ 0.001
+
+$ping5 set packetSize_ 500
+$ping5 set interval_ 0.001
+
+$ awk -f 2.awk 2.tr
+No of packets dropped : 6982
+
+
